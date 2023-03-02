@@ -1,0 +1,215 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap');
+
+*{
+padding:0;
+margin:0;
+text-decoration: none;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+background-color:#FFBD59;
+
+	
+}
+#mensagem{
+	width:180px;
+Font-size:20px;
+background-color:white;
+
+border: 2px solid black;	
+	
+}
+
+
+.main-header{	
+width:100%;
+background-color:#A42B12;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+height:60px;
+overflow:hidden;
+}
+
+.main-header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+	gap:50px;
+	font-size:21px;
+}
+
+.main-header nav ul li a {
+	color:black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.main-header nav ul li a:hover {
+    background-color: 	#8B0000;
+	border-radius:50px;
+}
+
+.main-header img{
+	margin-left:100px;
+	width:150px;
+	height:90px;
+
+}
+
+.search-container{
+
+  width: 580px;
+  height:15px;
+  display: block;
+  margin: 0 auto;
+}
+
+input#familia{
+	background:transparent;
+border-radius:10px;
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  margin-left:-9px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid black;
+  outline: none;
+  &:focus{
+    border: blue;
+    transition: 0.35s ease;
+    color: #000000;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+  }
+ }
+
+.search-icon{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:relative;
+	left:510px;
+	bottom:56px;
+  width: 75px;
+  height: 75px;
+
+ 
+}
+
+
+
+
+
+input:focus {
+  outline: none;
+  border-color: blue;
+}
+
+
+
+.images{
+	display:flex ;
+	justify-content:center;
+	align-items:center;
+	flex-direction:row;
+	gap:70px;
+	
+ 
+}
+
+.images img{
+  width:100px;
+  height:100px;
+  	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+h1{
+text-align:center;
+letter-spacing:4px;
+	
+}
+
+h1 span{
+	color:red;
+	font-size:60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsividade*/
+@media screen and (max-width: 767px) {
+	.main-header{
+		width:100%;
+		
+	}
+	.main-header nav ul li{
+		gap:-10px;
+		margin-top:15px;
+		font-size:14px;
+		
+	}
+	
+.main-header img{
+	margin-left:-59px;
+	width:50px;
+	height:50px;
+
+}
+	
+	.search-container{
+		width:370px;
+	}
+	
+
+.search-icon{
+	
+	position:relative;
+	left:300px;
+	bottom:56px;
+
+ 
+}
+
+.images img{
+	width:100px;
+	height:70px;
+	
+}
+
+}

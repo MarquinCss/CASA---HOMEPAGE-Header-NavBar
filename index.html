@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>CASA - Página Inicial</title>
+</head>
+<body>
+<header Class="main-header"> 
+
+<img src="https://o.remove.bg/downloads/5214538a-98ea-4e09-aa6d-d6ed8f92efa6/image-removebg-preview.png" class="logo"> </img>
+<nav>
+        <ul>
+            <li><a href="inicialpg.html">Página Inicial</a></li>
+            <li><a href="#missão">Missão</a></li>
+            <li><a href="#visão">Visão</a></li>
+            <li><a href="#valores">Valores</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="mensagem"></div>
+<br><br><br>
+  <form class="search-container">
+    <input autocomplet="on" list = "familias" type="text" id="familia" placeholder="Qual departamento deseja buscar?">
+   <img  onclick="redirecionar()" class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
+
+<datalist id="familias">
+  <option id="mm" value="Marco">
+  <option id="eg" value="Evelyn">
+  <option id="bg" value="Bianca">
+  <option id="rb" value="Rafael">
+</datalist>
+</form>
+<br><br><br>
+<div class="images">
+<img src="https://o.remove.bg/downloads/aff83826-f0a6-4181-a5d1-0dab2d708ae1/image-removebg-preview.png"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" alt=""> </img>
+<img src="https://o.remove.bg/downloads/f5d91048-01bf-4dcc-9087-835e1a199ecd/image-removebg-preview.png"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" alt="">
+<img src="https://o.remove.bg/downloads/f5d91048-01bf-4dcc-9087-835e1a199ecd/image-removebg-preview.png"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" alt="">
+<img src="https://o.remove.bg/downloads/f5d91048-01bf-4dcc-9087-835e1a199ecd/image-removebg-preview.png"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" alt="">
+</div>
+</div>
+<br>
+
+<h1>Nossa família é a nossa <br> <span> CASA </span></h1>
+
+</body>
+<script>
+ function redirecionar() {
+  var familia = document.getElementById("familia").value;
+  if (familia === "Marco" || familia === "Evelyn" || familia === "Bianca" || familia === "Rafael") {
+    var mensagem = "Redirecionando para família de " + familia + "...";
+    document.getElementById("mensagem").innerHTML = mensagem;
+    setTimeout(function() {
+      window.location.href = familia.toLowerCase() + ".html";
+    }, 2000);
+  } else {
+    alert("Opção inválida. Escolha entre Marco, Evelyn, Bianca ou Rafael.");
+  }
+}
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>
